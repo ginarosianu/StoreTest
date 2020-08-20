@@ -11,7 +11,6 @@ public class AuthenticationPage {
 
     public AuthenticationPage(WebDriver driver) {
         this.webDriver = driver;
-
     }
 
     @FindBy(xpath = "//*[@class='page-heading']")
@@ -21,7 +20,8 @@ public class AuthenticationPage {
         Assert.assertTrue(expectedTitle.equals(pageTitle.getText()));
     }
 
-//    public void enterEmailAddress(String emailAddres){
-//        pageTitle.sendKeys(emailAddres);
-//    }
+
+    public void enterEmailAddress(String emailAddres){
+        pageTitle.sendKeys(emailAddres);
+    }
 }
